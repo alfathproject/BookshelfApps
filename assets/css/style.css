@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&family=Quicksand&family=Rubik+Dirt&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 14px;
+}
+
+:root{
+    --purple- : #A68DAD;
+    --coffee- : #C7B198;
+    --darkgray- : #DFD3C3;
+    --gray- : #F0ECE3;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--darkgray-);
+}
+
+/* element in header */
+header{
+    text-align: center;
+    position: relative;
+    padding: 0;
+}
+
+#header-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 6rem;
+    object-fit: cover;
+    filter: brightness(40%);
+    transform: translate(0,-50%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+#header-title{
+    color: var(--purple-);
+    font-size: 1.5rem;
+}
+
+/* input section */
+main{
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.input-section{
+    padding: 0.5rem;
+    margin: 2rem 0.5rem 0.5rem;
+    background-color: var(--gray-);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 1rem;
+}
+
+.input{
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input label{
+    text-align: left;
+}
+
+.input input{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.input-check-complete{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.input-check-complete input {
+    cursor: pointer;
+}
+
+#btn-input-submit,
+#btn-search-book{
+    padding: 0.5rem 2rem;
+    background-color: var(--purple-);
+    border: 1px solid var(--purple-);
+    border-radius: 1rem;
+    margin: 1rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    color: white;
+}
+#btn-input-submit:hover,
+#btn-search-book:hover{
+    background-color: var(--darkgray-);
+    border: 1px solid var(--purple-);
+}
+
+/* search section */
+.search-section {
+    background-color: var(--gray-);
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.search-section input {
+    margin: 0.5rem 0 1rem;
+}
+
+/* book shelf */
+aside{
+    background-color: var(--gray-);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.book-shelf {
+    background-color: var(--purple-);
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* footer */
+footer{
+    text-align: center;
+    background-color: var(--coffee-);
+    padding: 2rem;
+}
+
+.book-item{
+    background-color: var(--gray-);
+    border-radius: 1rem;
+    text-align: start;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem 0.5rem;
+}
+
+.no-book{
+    padding: 0.5rem;
+    margin: 0.5rem;
+    text-transform: capitalize;
+    background-color: var(--gray-);
+    border-radius: 1rem;
+    font-style: italic;
+    color: var(--purple-);
+}
+
+.book-data h3,
+.book-data p{
+    margin: 0.5rem;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.action button{
+    margin: 0.4rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.action .btn-complete,
+.action .btn-incomplete{
+    color: white;
+    background-color: var(--purple-);
+}
+
+.action .btn-complete:hover,
+.action .btn-incomplete:hover{
+    background-color: var(--darkgray-);
+}
+
+.action .remove-book {
+    color: white;
+    background-color: red;
+}
+
+.action .remove-book:hover{
+    background-color: pink;
+}
+
+@media screen and (min-width: 400px) {
+    /* element in header */
+    #header-title{
+        font-size: 2.5rem;
+    }
+
+    #header-cover{
+        height: 10rem;
+    }
+
+    .input-section{
+        margin: 3rem 0.5rem 0.5rem;
+    }
+
+    .input-section h1{
+        font-size: 1.5rem;
+    }
+
+    .input-check-complete{
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .input-check-complete label {
+        margin: 0 1rem;
+    }
+
+    #btn-input-submit{
+        padding: 0.5rem 5rem;
+    }
+
+    /* search section */
+    .search-section{
+        position: sticky;
+        top: 27rem;
+    }
+
+    #btn-search-book {
+        max-width: 20rem;
+        padding: 0.5rem 10rem;
+        margin: 0 auto;
+    }
+
+    .book-item{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width: 870px) {
+    /* main */
+    main{
+        padding: 0.5rem;
+        display: flex;
+    }
+
+    /* article */
+    article, 
+    aside{
+        width: 50%;
+    }
+
+    /* aside */
+    aside {
+        margin-top: 1rem;
+    }
+
+    /* input section */
+    .input-section {
+        margin: 1rem 0.5rem 1rem;
+        position: sticky;
+        top: 1rem;
+    }
+}
